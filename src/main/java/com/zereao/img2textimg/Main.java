@@ -8,10 +8,6 @@ import com.zereao.img2textimg.utils.ThreadPoolUtils;
 import lombok.AllArgsConstructor;
 
 import java.io.*;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -19,7 +15,6 @@ import java.util.Scanner;
 import java.util.concurrent.CountDownLatch;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import java.util.stream.Collectors;
 
 /**
  * @author Zereao

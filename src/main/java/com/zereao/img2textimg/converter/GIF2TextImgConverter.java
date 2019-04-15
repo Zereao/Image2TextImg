@@ -66,7 +66,6 @@ public class GIF2TextImgConverter extends AbstractImgConverter {
         private Map<Integer, BufferedImage> frameMap;
         private Integer fontSizePt;
 
-
         @Override
         protected Map<Integer, BufferedImage> compute() {
             int eachThreadTaskNum = 5;
