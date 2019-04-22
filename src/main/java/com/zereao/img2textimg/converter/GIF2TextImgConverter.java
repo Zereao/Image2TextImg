@@ -27,17 +27,6 @@ public class GIF2TextImgConverter extends AbstractImgConverter {
         }
         ForkJoinPool forkJoinPool = new ForkJoinPool();
         ForkJoinTask<Map<Integer, BufferedImage>> task = forkJoinPool.submit(new Text2GifForkJoinTask(imgMap, fontSizePt));
-        while (true) {
-            if (task.isDone()) {
-                break;
-            } else {
-                try {
-                    TimeUnit.MILLISECONDS.sleep(50);
-                } catch (InterruptedException e) {
-                    log.error(e, "Text2GifForkJoinTask 自旋中断！");
-                }
-            }
-        }
         Map<Integer, BufferedImage> resultMap = new TreeMap<>();
         try {
             resultMap.putAll(task.get());
